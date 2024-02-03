@@ -277,7 +277,7 @@ function colorChanger() {
   gsap.to(".top", {
     scrollTrigger: {
       trigger: ".page3",
-      markers: false,
+      // markers: false,
       start: "-30% 60%",
       end: "top 40%",
       scrub: true,
@@ -288,7 +288,7 @@ function colorChanger() {
   gsap.to(".main", {
     scrollTrigger: {
       trigger: ".page3",
-      markers: false,
+      // markers: false,
       start: "-30% 60%",
       end: "top 40%",
       scrub: true,

@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var engine = Engine.create(),
         world = engine.world;
+        Body = Matter.Body;
+
 
 
 
@@ -43,17 +45,64 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    Render.run(render);
+    var bodiesAdded = false; // Flag to track if bodies are already added
 
-    // Create a composite for logos
-    var runner = Runner.create();
-    Runner.run(runner, engine);
 
     let radius = getRadius()
     let radiusBig = getRadiusBig()
 
 
-    function createBodies() {
+
+    // Render.run(render);
+    // var runner = Runner.create();
+    // Runner.run(runner, engine);
+
+    function runrr() {
+        Render.run(render);
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(engine, {
+        scrollTrigger: {
+            trigger: "#canvas-container",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1, // Adjust the scrubbing intensity
+            // markers: true 
+        },
+        onUpdate: function () {
+            if (!bodiesAdded) {
+                runrr();
+                addBodiesWithAnimation();
+                bodiesAdded = true; // Set the flag to true after adding bodies
+            }
+        }
+    });
+
+    var runner = Runner.create();
+    Runner.run(runner, engine);
+
+    function addBodiesWithAnimation() {
+        let delay = 150;
+    
+        function addBodyWithAnimation(logo, delay) {
+            setTimeout(() => {
+                Composite.add(world, logo);
+    
+                // Use Tween.js for animation
+                var initialY = logo.position.y;
+                var targetY = 300; // Change this to the desired final Y position
+                var tween = new TWEEN.Tween({ y: initialY })
+                    .to({ y: targetY }, 2000) // Adjust duration as needed
+                    .easing(TWEEN.Easing.Quadratic.Out) // Change easing function if needed
+                    .onUpdate(function () {
+                        Body.setPosition(logo, { x: logo.position.x, y: this.y });
+                    })
+                    .start();
+            }, delay);
+        }
+
         let logo1 = Bodies.circle(200, 50, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -68,8 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo1);
 
         // Add the logo composite to the world
         let logo2 = Bodies.circle(200, 50, radius, {
@@ -87,8 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo2);
-
 
         let logo3 = Bodies.circle(200, 50, radiusBig, {
             density: 0.0001,
@@ -105,8 +150,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo3);
-
         let logo4 = Bodies.circle(200, 50, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -121,8 +164,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo4);
 
         let logo5 = Bodies.circle(200, 50, radius, {
             density: 0.0001,
@@ -139,8 +180,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo5);
-
         let logo6 = Bodies.circle(200, 50, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -155,8 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo6);
 
         let logo7 = Bodies.circle(200, 50, radius, {
             density: 0.0001,
@@ -173,8 +210,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo7);
-
         let logo8 = Bodies.circle(200, 50, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -189,8 +224,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo8);
 
         let logo9 = Bodies.circle(500, 10, radius, {
             density: 0.0001,
@@ -207,8 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo9);
-
         let logo10 = Bodies.circle(500, 10, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -223,8 +254,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo10);
 
         let logo11 = Bodies.circle(500, 50, radius, {
             density: 0.0001,
@@ -241,8 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo11);
-
         let logo12 = Bodies.circle(500, 50, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -257,8 +284,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo12);
 
         let logo13 = Bodies.circle(200, 50, radius, {
             density: 0.0001,
@@ -275,8 +300,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo13);
-
         let logo14 = Bodies.circle(500, 50, 40, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -291,8 +314,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo14);
 
         let logo15 = Bodies.circle(500, 10, radius, {
             density: 0.0001,
@@ -309,8 +330,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo15);
-
         let logo16 = Bodies.circle(500, 10, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -325,8 +344,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo16);
 
         let logo17 = Bodies.circle(500, 10, radius, {
             density: 0.0001,
@@ -343,8 +360,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo17);
-
         let logo18 = Bodies.circle(500, 10, radius, {
             density: 0.0001,
             frictionAir: 0.01,
@@ -359,8 +374,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         );
-
-        Composite.add(world, logo18);
 
         let logo19 = Bodies.circle(500, 10, radius, {
             density: 0.0001,
@@ -377,26 +390,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         );
 
-        Composite.add(world, logo19);
+        let logo20 = Bodies.circle(500, 50, 50, {
+        density: 0.0001,
+        frictionAir: 0.01,
+        restitution: 1,
+        friction: 0.05,
+        render: {
+            sprite: {
+                texture: './logo/20.svg',
+        xScale: getScaleFunction(),
+        yScale: getScaleFunction()
+            }
+        }}
+        );
 
-        // let logo20 = Bodies.circle(500, 50, 50, {
-        // density: 0.0001,
-        // frictionAir: 0.01,
-        // restitution: 1,
-        // friction: 0.05,
-        // render: {
-        //     sprite: {
-        //         texture: './logo/20.svg',
-        // xScale: getScaleFunction(),
-        // yScale: getScaleFunction()
-        //     }
-        // }}
-        // );
-
-        // Composite.add(world, logo20);
+        addBodyWithAnimation(logo1, delay += 150);
+        addBodyWithAnimation(logo2, delay += 150);
+        addBodyWithAnimation(logo3, delay += 150);
+        addBodyWithAnimation(logo4, delay += 150);
+        addBodyWithAnimation(logo5, delay += 150);
+        addBodyWithAnimation(logo6, delay += 150);
+        addBodyWithAnimation(logo7, delay += 150);
+        addBodyWithAnimation(logo8, delay += 150);
+        addBodyWithAnimation(logo9, delay += 150);
+        addBodyWithAnimation(logo10, delay += 150);
+        addBodyWithAnimation(logo11, delay += 150);
+        addBodyWithAnimation(logo12, delay += 150);
+        addBodyWithAnimation(logo13, delay += 150);
+        addBodyWithAnimation(logo14, delay += 150);
+        addBodyWithAnimation(logo15, delay += 150);
+        addBodyWithAnimation(logo16, delay += 150);
+        addBodyWithAnimation(logo17, delay += 150);
+        addBodyWithAnimation(logo18, delay += 150);
+        addBodyWithAnimation(logo19, delay += 150);
+        addBodyWithAnimation(logo20, delay += 150);
     }
-    createBodies()
-
     function getScaleFunction() {
         // You can implement logic here to adjust the scale based on screen size
         // For example, return a smaller scale for smaller screens
@@ -437,8 +465,8 @@ document.addEventListener('DOMContentLoaded', function () {
     else {
         Composite.add(world, [
             // walls
-            Bodies.rectangle(400, -50, 800, 10, { isStatic: true }),
-            Bodies.rectangle(400, 550, 1000, 110, { isStatic: true }),
+            Bodies.rectangle(400, -50, 1000, 100, { isStatic: true }),
+            Bodies.rectangle(400, 550, 1000, 100, { isStatic: true }),
             Bodies.rectangle(900, 300, 10, 700, { isStatic: true }),
             Bodies.rectangle(-120, 300, 50, 700, { isStatic: true })
             ]);
