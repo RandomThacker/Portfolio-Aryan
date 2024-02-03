@@ -1,15 +1,11 @@
 const lenis = new Lenis({
   duration: 4,
   smooth:true,
-  easing: (t, friction = 0.1) => {
-    // Apply friction to the easing function
-    const easedValue = Math.min(1, 1.001 - Math.pow(2, -10 * t));
-    
-    // Apply friction to the eased value
-    const frictionedValue = easedValue - friction * t;
-
-    return Math.min(1, frictionedValue);
-  }
+  // easing: (t, friction = 0.1) => {
+  //   const easedValue = Math.min(1, 1.001 - Math.pow(2, -10 * t));
+  //   const frictionedValue = easedValue - friction * t;
+  //   return Math.min(1, frictionedValue);
+  // }
 });
 function raf(time) {
   lenis.raf(time);
@@ -24,14 +20,13 @@ function heroCursor() {
 
   // ---------------------------Hero------------------------
   hero.addEventListener("mouseenter", function () {
-    gsap.to(".cursorHero", {
-      transform: "translate(-50%,-50%) scale(1)",
-      // backgroundColor: "#ffe600",
-      backgroundColor: "rgb(216, 18, 18)",
-      border: "2px solid white",
-      innerHTML: `<h1>SCRATCH HERE</h1>`,
-      color: "white",
-    });
+   gsap.to(".cursorHero", {
+        transform: "translate(-50%,-50%) scale(1)",
+        backgroundColor: "#ff1e006f",
+        border: "2px solid rgb(239, 191, 191)",
+        innerHTML: `<h1>SCRATCH HERE</h1>`,
+        color: "antiquewhite",
+      })
   });
 
   hero.addEventListener("mouseleave", function () {
@@ -192,9 +187,9 @@ function heroCursor() {
   el.addEventListener("mouseover", function () {
     gsap.to(".cursorHero", {
       transform: "translate(-30%,-30%) scale(0.8)",
-      backgroundImage:"url(./img/about.gif)",
+      backgroundImage:"url(./img/batman.gif)",
       borderRadius:"10px",
-      width:"200px",
+      width:"150px",
       height:"150px",
       border:"0",
     },

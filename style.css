@@ -84,8 +84,8 @@ html, body {
     
 
   .cursorHero h1{
-    font-size: 1vw;
-    font-family: benzin;
+    font-size: 1.5vw;
+    font-family: migra;
   }
 
   .cursorCanvas{
@@ -107,8 +107,8 @@ html, body {
     
 
   .cursorCanvas p{
-    font-size: 2vw;
-    font-family: benzin;
+    font-size: 2.5vw;
+    font-family: migra;
     color: whitesmoke;
   }
 
@@ -470,6 +470,7 @@ section {
     margin-top: 100vh;
     background-color: black;
     cursor: none;
+    position: relative;
   }
 
   #canvas-container canvas{
