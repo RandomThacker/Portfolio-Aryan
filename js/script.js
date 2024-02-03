@@ -303,7 +303,7 @@ function scrollOpener() {
     scrollTrigger: {
       trigger: ".ScrollToOpen",
       start: "51% 50%",
-      end: "100% 60%",
+      end: "150% top",
       scrub: 1,
       pin: true,
       // markers: true
