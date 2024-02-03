@@ -1,0 +1,770 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+
+@font-face {
+    font-family: calibreweb;
+    src: url(CalibreWeb-Black.ttf);
+  }
+
+  @font-face {
+    font-family: calibrewebReg;
+    src: url(CalibreWeb-Regular.ttf);
+  }
+  
+  
+  @font-face {
+    font-family: migra;
+    src: url(Migra-Regular.otf);
+  }
+
+  @font-face {
+    font-family: benzin;
+    src: url(benzin-bold.ttf);
+  }
+
+  @font-face {
+    font-family: sans;
+    src: url(GeneralSans-Variable.ttf);
+  }
+
+  @font-face {
+    font-family: bulevar;
+    src: url(bulevar-poster-webfont-transfonter.ttf);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+*::selection{
+  color: black;
+  background-color: rgb(216, 18, 18);
+}
+
+html {
+    scroll-behavior: initial;
+    overflow: hidden;
+}
+
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.main{
+    background-color: #000000;
+  }
+
+  /* ------------------Cursor---------------------*/
+
+  .cursorHero{
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    z-index: 9;
+    /* margin: 0 -2vw; */
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    background-color: #ff1e006f;
+    border: 2px solid rgb(239, 191, 191);
+    height: 9vw;
+    width: 9vw;
+    color: antiquewhite;
+    /* color: rgba(22, 14, 14, 0.468); */
+    object-fit: contain;
+    background-size: contain;
+    }
+    
+
+  .cursorHero h1{
+    font-size: 1vw;
+    font-family: benzin;
+  }
+
+  .cursorCanvas{
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    /* margin: 0 -2vw; */
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(0);
+    background-color: rgba(137, 137, 137, 0.237);
+    border: 2px solid rgb(255, 255, 255);
+    height: 15vw;
+    width: 15vw;
+    }
+    
+
+  .cursorCanvas p{
+    font-size: 2vw;
+    font-family: benzin;
+    color: whitesmoke;
+  }
+
+  
+
+
+
+
+
+
+
+  /* ------------------------------CUrsor-------------------------- */
+
+.container {
+    width: 95%;
+    /* margin: auto; */
+}
+
+section {
+    padding: 50px 0;
+    /* background-color:black; */
+    /* height: 60vh;
+    display: flex;
+    align-items: center; */
+}
+
+
+
+/* ------------------------nav menu--------------------- */
+
+.logo {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    font-family: calibreweb;
+    padding: 2vw 5vw;
+    left: 0;
+    color: white;
+    cursor: pointer;
+    /* mix-blend-mode: difference; */
+  }
+  
+  .menu {
+    text-align: right;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    font-family: calibreweb;
+    margin: 2vw 5vw;
+    right: 0;
+    color: white;
+    padding: 1.5vw;
+    padding-top: 0;
+  }
+  
+  .text-div {
+    height: 1.5vw;
+    overflow: hidden;
+    z-index: 99;
+  }
+  
+  .hoverEffect h1 {
+    font-size: 1vw;
+    font-weight: 600;
+    transition: all ease-out 0.5s;
+    z-index: 99;
+    cursor: pointer;
+  }
+  
+  .hoverEffect:hover h1 {
+    transform: translateY(-100%);
+    color: #D14836;
+
+  }
+
+
+  
+  .logo h1 {
+    color: #D14836;
+    cursor: pointer;
+  }
+  
+  /* ------------------------nav menu--------------------- */
+  
+  
+  .heroText h1 {
+    text-transform: uppercase;
+    color: white;
+    font-family: calibreweb;
+    position: absolute;
+    z-index: 9;
+    bottom: -6%;
+    font-size: 18vw;
+    line-height: 12vw;
+    pointer-events: none;
+  }
+  
+  .hero {
+    position: relative;
+    cursor: default;
+    /* background-color: black; */
+  
+  }
+  
+  /* -------------------canvas-hero------------------- */
+  #bridge {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    cursor: grab;
+  }
+  
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* -------------------canvas-hero------------------- */
+  
+
+  
+  
+
+
+/* ---------------------page 2 - about----------------- */
+
+.about2{
+  height: 64rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* background: #3d16ff; */
+  padding: 18vw 4vw 6vw 4vw;
+  color: #ffffff;
+}
+
+.aboutHeading{
+  width: 50%;
+  text-transform: uppercase;
+  font-weight: 600;
+  /* background-color: #51ddac; */
+  position: relative;
+
+}
+
+.aboutContent{
+  width: 50%;
+  font-family: calibrewebReg;
+  font-size: 1.7vw;
+  /* background: #000; */
+  padding-top: 50vh;
+}
+
+.aboutH{
+  font-size: 7vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px rgb(171, 171, 171);
+  color: transparent;
+  font-family: benzin;
+  margin-bottom: -3vw;
+  /* background: #8700b0; */
+}
+
+.floatingHeading{
+  position: absolute;
+}
+
+.fill{
+  color: white;
+  -webkit-text-stroke: 2px white;
+}
+
+.aboutLineImage{
+  position: absolute;
+  right: -5%;
+  top: 45%;
+  scale: 0.7;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .about2{
+    height: 120vh;
+    flex-direction: column;
+    /* background: #3d16ff; */
+  }
+
+  
+.aboutHeading{
+  width: 100%;
+  position: relative;
+
+}
+
+.aboutContent{
+  width: 93%;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  padding-top: 30vh;
+}
+
+.aboutH{
+  font-size: 3rem;
+  margin-bottom: -3vw;
+  /* background: #8700b0; */
+}
+
+.floatingHeading{
+  position: absolute;
+  margin-top: 2vh;
+}
+
+.aboutLineImage{
+  position: absolute;
+  right: -5%;
+  top: -150%;
+  scale: 0.5;
+  margin-top: 20vh;
+}
+  
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+
+  .about2{
+    height: 115vh;
+    flex-direction: column;
+    /* background: #3d16ff; */
+  }
+
+  
+.aboutHeading{
+  width: 100%;
+  position: relative;
+
+}
+
+.aboutContent{
+  width: 93%;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  padding-top: 30vh;
+}
+
+.aboutH{
+  font-size: 4rem;
+  margin-bottom: -3vw;
+  /* background: #8700b0; */
+}
+
+.floatingHeading{
+  position: absolute;
+  margin-top: 0vh;
+}
+
+.aboutLineImage{
+  position: absolute;
+  left: 3%;
+  top: 10%;
+  scale: 0.5;
+  margin-top: 20vh;
+}
+  
+}
+
+
+
+
+
+  /* ---------------------page 2 - about----------------- */ 
+
+
+
+/* ------------------Page 3 - Scroll to open-------------- */
+
+/* ----------------Scroll to Open---------------- */
+.ScrollToOpen {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .top {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background-color: #000000;
+    top: 0%;
+    z-index: 9;
+    overflow: hidden;
+    /* transform: rotate(180deg); */
+  }
+  
+  .center {
+    width: 100%;
+    height: 150vh!important;
+    background-color: #000000;
+    position: relative;
+  }
+  
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    overflow: hidden;
+    z-index: 3;
+  }
+  
+  .ScrollToOpen h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9vw;
+    font-weight: 900;
+    font-family: benzin;
+    white-space: nowrap;
+  
+  }
+  
+  .top-h {
+    top: 100% !important;
+    color: rgb(0, 0, 0);
+    /* transform: rotate(180deg); */
+  }
+  
+  
+  .bottom-h {
+    top: 0% !important;
+    color: rgb(0, 0, 0);
+  }
+  
+  .content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: wheat;
+    /* background-color: blueviolet; */
+    margin-top: 100vh;
+    background-color: black;
+    cursor: none;
+  }
+
+  #canvas-container canvas{
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+
+  #canvas-container canvas:hover .cursorHero{
+    opacity: 0;
+    scale: 0;
+  }
+  
+  .stroke {
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    font-family: sans-serif;
+    position: absolute;
+    font-family: benzin;
+  }
+  
+  .top-stroke{
+  top: 65%!important;
+  }
+  
+  .bottom-stroke{
+    top: 35%!important;
+  }
+  
+  @media only screen and (max-width: 750px) {    
+    .ScrollToOpen h1 {
+        font-size: 2.5rem;
+    }
+  
+    .top-stroke{
+        margin-top: 10vh;
+        }
+        
+        .bottom-stroke{
+            margin-top: -10vh;
+        }
+  }
+  
+  /* ----------------Scroll to Open----------------  */
+  
+
+
+
+/* ------------------------Pagge 4------------------------ */
+.page4{
+    height: 65vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    margin-bottom: -10vh;
+    z-index: 2;
+  }
+  
+  .pg4H{
+    font-size: 7vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px rgb(171, 171, 171);
+    color: transparent;
+    /* position: absolute; */
+    font-family: benzin;
+    margin-bottom: -3vw;
+  }
+  
+  .fill{
+    color: white;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  .titlePg4{
+    position: absolute;
+    right: 5%;
+    top: 0%;
+  }
+
+  @media only screen and (max-width: 750px) {   
+    .page4{
+      height: 30vh;
+      margin-bottom: -10vh;
+    }
+    
+    .pg4H{
+      font-size: 3rem;
+    }
+  }
+
+/* -------------------------Horizontal scroll----------- */
+ #horizontal {
+    padding: 100px 0;
+    width: 400%;
+    overflow-x: hidden;
+}
+
+/* .workHor .pin-spacer{*/
+ /* background-color:black; */
+/* }  */
+
+.horizontal__content {
+    display: flex;
+    flex: 1;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+}
+
+.horizontal__item {
+    /* border: 1px solid #efefef; */
+    height: 75vh;
+    width: 55vw;
+    border-radius: 10px;
+    /* background-color:pink; */
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    position: relative;
+}
+
+.horizontal__item:nth-child(1) {
+  margin-left: 8vw;
+}
+
+.card{
+  /* background-color: purple; */
+  height: 90%;
+  width: 50%;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.projectImg{
+  width: 80%;
+  position: absolute;
+  bottom: -10%;
+  left: 10%;
+}
+
+.horizontal__item .card .img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: blur(5px);
+  /* background: #ffe600be; */
+}
+
+.horizontal__item:not(:last-child) {
+    margin-right: 3vw;
+}
+
+.topNumber{
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  color: white;
+  font-size: 12vw;
+  font-weight: 600;
+  font-family: calibreweb;
+  z-index: 5;
+}
+
+.bottomContent{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  color: white;
+}
+
+.bottomContent h1{
+  font-size: 8vw;
+  font-weight: 600;
+  font-family: calibreweb;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: transparent;
+  text-transform: capitalize;
+  /* background-color: aqua; */
+}
+
+.bottomContent h2{
+  font-size: 4vw;
+  font-weight: 600;
+  font-family: calibreweb;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: transparent;
+  /* background-color: #ff98a2; */
+  margin-bottom: -41px;
+}
+
+
+.bottomContent p{
+  font-size: 1vw;
+  font-weight: 200;
+  font-family: benzin;
+  width: 90%;
+  padding-left: 18%;
+}
+
+.horizontal__num {
+    font-size: 80px;
+    font-weight: 900;
+    font-stretch: condensed;
+    color: #ff98a2;
+}
+
+.vertical{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+@media only screen and (max-width: 750px) { 
+  #horizontal {
+    padding: 20vh 0;
+    width: 700%;
+    height: 70vh;
+    /* background-color: #55bb74; */
+    overflow-x: hidden;
+}
+
+.horizontal__item {
+    height: 20rem;
+    width: 60rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    position: relative;
+}
+
+.card{
+  /* background-color: purple; */
+  height: 90%;
+  width: 60%;
+}
+
+.topNumber{
+  position: absolute;
+  top: -3%;
+  left: 2%;
+  color: white;
+  font-size: 4rem;
+}
+
+.bottomContent{
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+}
+
+.bottomContent h1{
+  font-size: 3.5rem;
+}
+
+.bottomContent p{
+  font-size: 0.8rem;
+  font-weight: 200;
+  font-family: benzin;
+  width: 90%;
+  padding-left: 8%;
+}
+
+.horizontal__num {
+    font-size: 80px;
+    font-weight: 900;
+    font-stretch: condensed;
+    color: #ff98a2;
+}
+
+.vertical{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+}   
+}
+/* ----------------------------------------Horizontal Scrolll---------------------- */
+/* ------------------------Pagge 4------------------------ */ 
+
+
+
+  .page5{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #000000; */
+  }
+
+  .colChange{
+    background-color: #000000!important;
+  }
+
+
+
+
+  /* .page4 img{
+    height: 200px;
+    width: 300px;
+  } */
