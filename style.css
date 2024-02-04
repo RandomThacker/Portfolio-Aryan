@@ -144,12 +144,13 @@ section {
     position: absolute;
     top: 0;
     z-index: 99;
-    font-family: calibreweb;
-    padding: 2vw 5vw;
+    padding: 1vw 2vw;
     left: 0;
-    color: white;
     cursor: pointer;
-    /* mix-blend-mode: difference; */
+  }
+
+  .logo img{
+    width: 80px;
   }
   
   .menu {
@@ -601,13 +602,16 @@ section {
   width: 50%;
   position: relative;
   overflow-y: hidden;
+  cursor: none;
 }
 
 .projectImg{
   width: 80%;
   position: absolute;
   bottom: -10%;
-  left: 10%;
+  left: 10%;  
+  cursor: none;
+
 }
 
 .horizontal__item .card .img{
@@ -616,6 +620,7 @@ section {
   object-fit: cover;
   border-radius: 10px;
   filter: blur(5px);
+  cursor: none;
   /* background: #ffe600be; */
 }
 
@@ -632,6 +637,7 @@ section {
   font-weight: 600;
   font-family: calibreweb;
   z-index: 5;
+  /* color: #d1483657; */
 }
 
 .bottomContent{
@@ -762,6 +768,38 @@ section {
     background-color: #000000!important;
   }
 
+  .heroCanvas {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+    z-index: 2;
+  }
+
+  .scrollFooter{
+    height: 10vh;
+    background-color: #FFE600;
+  }
+
+  footer{
+    height: 80vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer h1{
+    font-size: 8vw;
+    color: #ffffff;
+    font-family: calibreweb;
+    text-transform: uppercase;
+  }
+
+  footer img{
+    width: 60%;
+  }
 
 
 

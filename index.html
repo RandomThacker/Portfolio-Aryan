@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./img/logo.svg" />
   <title>Portfolio Final</title>
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -17,8 +18,8 @@
   <div class="hero">
 
     <!-- ------------------------nav bar------------------ -->
-    <div class="logo hover">
-      <h1>&lt;<span style="color: white;">/A</span>&gt;<h1>
+    <div class="logo">
+      <img src="./img/logo.svg" alt="">
     </div>
     <div class="menu hover">
       <div class="hoverEffect">
@@ -116,8 +117,10 @@
             <div class="horizontal__item">
               <div class="topNumber">01</div>
               <div class="card">
+                <a href="https://randommeet.vercel.app/">
                 <img src="https://i.pinimg.com/564x/76/3a/60/763a6042eae3c69b43ae6a2a6e7c9b20.jpg" class="img">
                 <img src="./img/1.png" class="projectImg">
+              </a>
               </div>
               <div class="bottomContent">
                 <h2>random</h2>
@@ -128,10 +131,12 @@
             <div class="horizontal__item">
               <div class="topNumber">02</div>
               <div class="card">
+                <a href="https://randommeet.vercel.app/">
                 <img src="https://i.pinimg.com/564x/b9/67/ba/b967baa2e23e2ed8e37a3199e3c70ffb.jpg" class="img">
                 <img src="./img/2.png" class="projectImg">
-
+              </a>
               </div>
+
               <div class="bottomContent">
                 <h2>random</h2>
                 <h1>Eats</h1>
@@ -140,10 +145,12 @@
             </div><div class="horizontal__item">
               <div class="topNumber">03</div>
               <div class="card">
-                <img src="https://i.pinimg.com/564x/12/fc/f7/12fcf7e625761de5415ff9dd1cf01e02.jpg" class="img">
+                <a href="https://sketchbook-random.vercel.app/">
+                  <img src="https://i.pinimg.com/564x/12/fc/f7/12fcf7e625761de5415ff9dd1cf01e02.jpg" class="img">
                 <img src="./img/3.png" class="projectImg">
-
+              </a>
               </div>
+
               <div class="bottomContent">
                 <h2>sketch</h2>
                 <h1>Book</h1>
@@ -152,10 +159,12 @@
             </div><div class="horizontal__item">
               <div class="topNumber">04</div>
               <div class="card">
+                <a href="https://randomthacker.github.io/Matrax-Fane/">
                 <img src="https://i.pinimg.com/564x/33/03/85/330385d11b0ea30c0e35babfa8321b29.jpg" class="img">
                 <img src="./img/4.png" class="projectImg">
-
+              </a>
               </div>
+
               <div class="bottomContent">
                 <h1>Matrax</h1>
                 <p> A visually stunning website brought to life with GSAP, offering dynamic animations and seamless interactions </p>
@@ -168,7 +177,16 @@
 
 
 
-    <div class="page5"></div>
+    <div class="page5">
+      <canvas class="heroCanvas"></canvas>
+    </div>
+
+    <div class="scrollFooter"></div>
+
+    <footer>
+      <!-- <h1>Get In Touch</h1> -->
+      <img src="./img/git.svg" alt="">
+    </footer>
   </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
