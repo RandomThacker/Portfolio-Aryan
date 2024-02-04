@@ -22,10 +22,10 @@ function heroCursor() {
   hero.addEventListener("mouseenter", function () {
    gsap.to(".cursorHero", {
         transform: "translate(-50%,-50%) scale(1)",
-        backgroundColor: "#ff1e006f",
-        border: "2px solid rgb(239, 191, 191)",
+        backgroundColor: "#ffe600e7",
+        border: "2px solid black",
         innerHTML: `<h1>SCRATCH HERE</h1>`,
-        color: "antiquewhite",
+        color: "black",
       })
   });
 
@@ -161,8 +161,8 @@ function heroCursor() {
       transform: "translate(-30%,-30%) scale(0.8)",
       backgroundImage:"url(./img/work.webp)",
       borderRadius:"10px",
-      width:"270px",
-      height:"200px",
+      width:"200px",
+      height:"150px",
       border:"0",
     },
     );
@@ -189,8 +189,8 @@ function heroCursor() {
       transform: "translate(-30%,-30%) scale(0.8)",
       backgroundImage:"url(./img/batman.gif)",
       borderRadius:"10px",
-      width:"150px",
-      height:"150px",
+      width:"170px",
+      height:"170px",
       border:"0",
     },
     );
@@ -221,8 +221,8 @@ about.forEach((el)=>{
       transform: "translate(-30%,-30%) scale(0.8)",
       backgroundImage:"url(./img/tech.gif)",
       borderRadius:"10px",
-      width:"270px",
-      height:"200px",
+      width:"220px",
+      height:"160px",
       border:"0",
     },
     );

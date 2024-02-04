@@ -72,11 +72,11 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
-    background-color: #ff1e006f;
-    border: 2px solid rgb(239, 191, 191);
+    background-color: #ffe600e7;
+    border: 2px solid black;
     height: 9vw;
     width: 9vw;
-    color: antiquewhite;
+    color: rgb(39, 28, 15);
     /* color: rgba(22, 14, 14, 0.468); */
     object-fit: contain;
     background-size: contain;
