@@ -15,41 +15,6 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-window.onload = function() {
-
-  var images = document.getElementsByTagName('img'),
-      totalImages = images.length,
-      imagesLoaded = 0,
-      img;
-
-
-  function checkForLoaded() {
-
-      if(imagesLoaded === totalImages) {
-          var loadingDiv = document.getElementById('loadingDiv');
-          loadingDiv.parentNode.removeChild(loadingDiv);
-      }
-  }
-
-
-  for (var i = 0; i < totalImages; i++) {
-      img = new Image();
-
-      img.onload = function () {
-
-          imagesLoaded++;
-          checkForLoaded();
-      }
-
-      img.src = images[i].src;
-
-  }
-}
-
-
-
-
-
 
 function heroCursor() {
   var hero = document.querySelector(".hero")
