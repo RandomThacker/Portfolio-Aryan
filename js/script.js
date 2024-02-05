@@ -14,6 +14,26 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
+// --------load images-----
+
+var images = document.getElementsByTagName('img'),
+totalImages = images.length,
+img;
+
+for (var i = 0; i < totalImages; i++) {
+  img = new Image();
+  img.src = images[i].src;
+}
+
+// var imgs = [];
+// var imgUrls = ["a.png","b.jpg","c.gif"];
+// for (i=0;i<imgUrls.length;i++) {
+//     imgs.push(new Image());
+//     imgs[i].src = imgUrls[i]
+// }
+
+// --------load images-----
+
 
 
 function heroCursor() {

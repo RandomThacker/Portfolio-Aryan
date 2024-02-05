@@ -817,6 +817,7 @@ section {
     color: #ffffff;
     font-family: calibreweb;
     text-transform: uppercase;
+    /* color: #B31312; */
   }
 
   footer h3{
@@ -824,6 +825,7 @@ section {
     color: #ffffff;
     font-family: calibrewebReg;
     margin-bottom: -2vw;
+    
   }
 
   .footerHeading{
