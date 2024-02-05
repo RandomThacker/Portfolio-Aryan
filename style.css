@@ -611,7 +611,6 @@ section {
   bottom: -10%;
   left: 10%;  
   cursor: none;
-
 }
 
 .horizontal__item .card .img{
@@ -732,6 +731,12 @@ section {
   font-size: 3.5rem;
 }
 
+.bottomContent h2{
+  font-size: 1.7rem;
+  margin-bottom: -21px;
+
+}
+
 .bottomContent p{
   font-size: 0.8rem;
   font-weight: 200;
@@ -752,6 +757,13 @@ section {
     width: 100%;
     /* background-color: red; */
 }   
+
+.projectImg{
+  width: 60%!important;
+  /* position: absolute;
+  bottom: -10%;
+  left: 10%;   */
+}
 }
 /* ----------------------------------------Horizontal Scrolll---------------------- */
 /* ------------------------Pagge 4------------------------ */ 
@@ -761,6 +773,9 @@ section {
   .page5{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background-color: #000000; */
   }
 
@@ -769,11 +784,12 @@ section {
   }
 
   .heroCanvas {
-    height: 100vh;
-    width: 100vw;
+    width: 80%;
+    height:  90%;
     display: block;
     margin: auto;
     object-fit: contain;
+    background-color: #D14836;
     z-index: 2;
   }
 

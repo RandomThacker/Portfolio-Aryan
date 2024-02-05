@@ -608,7 +608,7 @@ ScrollTrigger.create({
       });
     }
   },
-  markers: true
+  // markers: true
 });
 
 /*
