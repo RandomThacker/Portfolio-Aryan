@@ -15,6 +15,42 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
+window.onload = function() {
+
+  var images = document.getElementsByTagName('img'),
+      totalImages = images.length,
+      imagesLoaded = 0,
+      img;
+
+
+  function checkForLoaded() {
+
+      if(imagesLoaded === totalImages) {
+          var loadingDiv = document.getElementById('loadingDiv');
+          loadingDiv.parentNode.removeChild(loadingDiv);
+      }
+  }
+
+
+  for (var i = 0; i < totalImages; i++) {
+      img = new Image();
+
+      img.onload = function () {
+
+          imagesLoaded++;
+          checkForLoaded();
+      }
+
+      img.src = images[i].src;
+
+  }
+}
+
+
+
+
+
+
 function heroCursor() {
   var hero = document.querySelector(".hero")
 
@@ -71,7 +107,108 @@ function heroCursor() {
       })
     });
   })
-  // -----------------------------Menu------------------------
+
+// -------------------------Footer-------------------
+
+let link = document.querySelector('.linkedin') 
+  link.addEventListener("mouseover", function () {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.8)",
+      backgroundImage:"url(./img/linkedin.png)",
+      borderRadius:"10px",
+      width:"200px",
+      height:"200px",
+      border:"0",
+    });
+  });
+
+  link.addEventListener("mouseout", () => {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.2)",
+      backgroundColor: "#B31312",
+      borderRadius:"50%",
+      innerHTML: "",
+      backgroundImage:"",
+      width:"150px",
+      height:"150px",
+    })
+  });
+
+  let insta = document.querySelector('.instagram') 
+  insta.addEventListener("mouseover", function () {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.8)",
+      backgroundImage:"url(./img/insta.png)",
+      borderRadius:"10px",
+      width:"200px",
+      height:"200px",
+      border:"0",
+    });
+  });
+
+  insta.addEventListener("mouseout", () => {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.2)",
+      backgroundColor: "#B31312",
+      borderRadius:"50%",
+      innerHTML: "",
+      backgroundImage:"",
+      width:"150px",
+      height:"150px",
+    })
+  });
+
+  let github = document.querySelector('.github') 
+  github.addEventListener("mouseover", function () {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.8)",
+      backgroundImage:"url(./img/github.png)",
+      borderRadius:"10px",
+      width:"200px",
+      height:"200px",
+      border:"0",
+    });
+  });
+
+  github.addEventListener("mouseout", () => {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.2)",
+      backgroundColor: "#B31312",
+      borderRadius:"50%",
+      innerHTML: "",
+      backgroundImage:"",
+      width:"150px",
+      height:"150px",
+    })
+  });
+
+  let gmail= document.querySelector('.gmail') 
+  gmail.addEventListener("mouseover", function () {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.8)",
+      backgroundImage:"url(./img/gmail.png)",
+      borderRadius:"10px",
+      width:"200px",
+      height:"200px",
+      border:"0",
+    });
+  });
+
+  gmail.addEventListener("mouseout", () => {
+    gsap.to(".cursorHero", {
+      transform: "translate(-30%,-30%) scale(0.2)",
+      backgroundColor: "#B31312",
+      borderRadius:"50%",
+      innerHTML: "",
+      backgroundImage:"",
+      width:"150px",
+      height:"150px",
+    })
+  });
+
+
+
+
 
   // --------------------------------Work_Cards------------------------
 
@@ -331,7 +468,7 @@ function horizintalScroll() {
     scrollTrigger: {
       trigger: section_2,
       pin: true,
-      markers: true,
+      // markers: true,
       scrub: 1,
       snap: 1 / (box_items.length - 1),
       end: "+=" + section_2.offsetWidth
@@ -465,7 +602,7 @@ const scrollingText = gsap.utils.toArray(".rail h4");
 const tl = horizontalLoop(scrollingText, {
   repeat: -1,
   paddingRight: 20,
-  speed: 3
+  speed: 0.6,
 });
 
 // Default direction is scrolling down
@@ -473,8 +610,8 @@ let direction = 1;
 let t;
 
 ScrollTrigger.create({
-  trigger: ".content",
-  start: "top top",
+  trigger: ".scrollFooter",
+  start: "-1000% top",
   end: "bottom top",
   onUpdate: (self) => {
     if (self.direction !== direction) {

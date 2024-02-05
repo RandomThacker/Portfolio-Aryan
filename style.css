@@ -780,6 +780,27 @@ section {
   .scrollFooter{
     height: 10vh;
     background-color: #FFE600;
+    display: flex;
+    align-items: end;
+    /* justify-content: center; */
+  }
+
+  .rail {
+    display: flex;
+    margin-bottom: -10px;
+  }
+  
+  .rail h4 {
+    white-space: nowrap;
+    font-size: 3.5vw;
+    font-weight: 900;
+    letter-spacing: ls(120);
+    line-height: 1em;
+    margin: 0 20px 0 0;
+    color: rgb(0, 0, 0);
+    font-family: benzin;
+    text-transform: uppercase;
+
   }
 
   footer{
@@ -787,19 +808,59 @@ section {
     background: #000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
   }
 
   footer h1{
-    font-size: 8vw;
+    font-size: 9vw;
     color: #ffffff;
     font-family: calibreweb;
     text-transform: uppercase;
   }
 
+  footer h3{
+    font-size: 1.5vw;
+    color: #ffffff;
+    font-family: calibrewebReg;
+    margin-bottom: -2vw;
+  }
+
+  .footerHeading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #FFE600; */
+    padding-top: 5vw;
+  }
+
   footer img{
     width: 60%;
   }
+
+  .socials{
+    display: flex;
+    font-size: 2vw;
+    color: #ffffff;
+    font-family: migra;
+    text-transform: capitalize;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .socials h2{
+    padding: 5vw 8%;
+    z-index: 99;
+    cursor: pointer;
+    /* background-color: #ff98a2; */
+  }
+
+  .socials h2 a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
 
 
 
