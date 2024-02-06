@@ -16,7 +16,7 @@ requestAnimationFrame(raf);
 
 // --------load images-----
 
-var images = document.getElementsByTagName('img'),
+var images = document.getElementsByTagName('gif'),
 totalImages = images.length,
 img;
 
@@ -257,6 +257,7 @@ let link = document.querySelector('.linkedin')
     );
   });
 
+
   content.addEventListener("mousemove", function (dets) {
     gsap.to(".cursorCanvas", {
       left: dets.x,
@@ -387,6 +388,18 @@ tech.forEach((el)=>{
     gsap.to(".cursorHero", {
       left: dets.x,
       top: dets.y,
+    });
+  });
+
+
+  document.body.addEventListener("touchmove", function (dets) {
+    var x = dets.changedTouches[0].pageX;
+    var y = dets.changedTouches[0].pageY;
+    console.log(x, y);
+
+    gsap.to(".cursorHero", {
+      left: x,
+      top: y,
     });
   });
 

@@ -822,7 +822,6 @@ section {
     color: rgb(0, 0, 0);
     font-family: benzin;
     text-transform: uppercase;
-
   }
 
   footer{
@@ -839,6 +838,7 @@ section {
     color: #ffffff;
     font-family: calibreweb;
     text-transform: uppercase;
+    
     /* color: #B31312; */
   }
 
@@ -847,7 +847,6 @@ section {
     color: #ffffff;
     font-family: calibrewebReg;
     margin-bottom: -2vw;
-    
   }
 
   .footerHeading{
@@ -865,7 +864,6 @@ section {
   .socials{
     display: flex;
     font-size: 2vw;
-    color: #ffffff;
     font-family: migra;
     text-transform: capitalize;
     justify-content: space-around;
@@ -875,6 +873,7 @@ section {
   .socials h2{
     padding: 5vw 8%;
     z-index: 99;
+
     cursor: pointer;
     /* background-color: #ff98a2; */
   }
@@ -892,3 +891,84 @@ section {
   font-family: migra;
   text-align: center;
 }
+
+@media only screen and (max-width: 750px) {
+
+  .rail {
+    display: flex;
+    margin-bottom: -5px;
+  }
+
+  .rail h4 {
+    font-size: 2.5rem;
+  }
+
+  .scrollFooter{
+    height: 7vh;
+  }
+
+  footer h1{
+    font-size: 3.5rem;
+  }
+
+  footer h3{
+    font-size: 1.2rem;
+  }
+
+  .socials{
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .page5 h1{
+    background-color: #FFE600;
+    width: 100%;
+    font-size: 2rem;
+    font-family: migra;
+    text-align: center;
+  }
+
+  .menu {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    font-family: calibreweb;
+    margin: 2vw 5vw;
+    right: 0;
+    color: white;
+    padding: 1.5vw;
+    padding-top: 0;
+  }
+
+  .text-div {
+    height: 1.5rem;
+    overflow: hidden;
+    z-index: 99;
+  }
+  
+  .hoverEffect h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all ease-out 0.5s;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+
+  .cursorHero{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    height: 8rem;
+    width: 8rem;
+    }
+
+  .cursorHero h1{
+    font-size: 1.5rem;
+  }
+ }
