@@ -100,6 +100,7 @@ let link = document.querySelector('.linkedin')
     gsap.to(".cursorHero", {
       transform: "translate(-30%,-30%) scale(0.8)",
       backgroundImage:"url(./img/linkedin.png)",
+      backgroundColor: "black",
       borderRadius:"10px",
       width:"200px",
       height:"200px",
@@ -124,6 +125,7 @@ let link = document.querySelector('.linkedin')
     gsap.to(".cursorHero", {
       transform: "translate(-30%,-30%) scale(0.8)",
       backgroundImage:"url(./img/insta.png)",
+      backgroundColor: "black",
       borderRadius:"10px",
       width:"200px",
       height:"200px",
@@ -148,6 +150,7 @@ let link = document.querySelector('.linkedin')
     gsap.to(".cursorHero", {
       transform: "translate(-30%,-30%) scale(0.8)",
       backgroundImage:"url(./img/github.png)",
+      backgroundColor: "black",
       borderRadius:"10px",
       width:"200px",
       height:"200px",
@@ -172,6 +175,7 @@ let link = document.querySelector('.linkedin')
     gsap.to(".cursorHero", {
       transform: "translate(-30%,-30%) scale(0.8)",
       backgroundImage:"url(./img/gmail.png)",
+      backgroundColor: "black",
       borderRadius:"10px",
       width:"200px",
       height:"200px",
