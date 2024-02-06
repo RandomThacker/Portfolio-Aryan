@@ -43,10 +43,10 @@ function heroCursor() {
   hero.addEventListener("mouseenter", function () {
    gsap.to(".cursorHero", {
         transform: "translate(-50%,-50%) scale(1)",
-        backgroundColor: "#ffe600e7",
-        border: "2px solid black",
+        backgroundColor: "#dc0000a6",
+        border: "2px solid antiquewhite",
         innerHTML: `<h1>SCRATCH HERE</h1>`,
-        color: "black",
+        color: "antiquewhite",
       })
   });
 

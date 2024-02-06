@@ -72,11 +72,11 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
-    background-color: #ffe600e7;
-    border: 2px solid black;
+    background-color: #dc0000a6;
+    border: 2px solid antiquewhite;
     height: 9vw;
     width: 9vw;
-    color: rgb(39, 28, 15);
+    color: antiquewhite;
     /* color: rgba(22, 14, 14, 0.468); */
     object-fit: contain;
     background-size: contain;
@@ -791,11 +791,17 @@ section {
     object-fit: contain;
     background-color: #e7e7e7;
     z-index: 2;
+
+
+
+
+
+    display: none;
   }
 
   .scrollFooter{
     height: 10vh;
-    background-color: #FFE600;
+    background-color: rgb(208, 1, 1);
     display: flex;
     align-items: end;
     /* justify-content: center; */
@@ -879,10 +885,10 @@ section {
     text-decoration: none;
   }
 
-
-
-
-  /* .page4 img{
-    height: 200px;
-    width: 300px;
-  } */
+.page5 h1{
+  background-color: #FFE600;
+  width: 100%;
+  font-size: 3vw;
+  font-family: migra;
+  text-align: center;
+}
