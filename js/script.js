@@ -315,7 +315,7 @@ let link = document.querySelector('.linkedin')
   el.addEventListener("mouseover", function () {
     gsap.to(".cursorHero", {
       transform: "translate(-30%,-30%) scale(0.8)",
-      backgroundImage:"url(./img/batman.gif)",
+      backgroundImage:"url(https://i.ibb.co/dmfWX9v/batman.gif)",
       borderRadius:"10px",
       width:"170px",
       height:"170px",
