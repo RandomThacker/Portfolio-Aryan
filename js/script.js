@@ -35,6 +35,15 @@ for (var i = 0; i < totalImages; i++) {
 // --------load images-----
 
 
+function loaderAnimation(){
+  var loader = document.querySelector("#loader")
+     setTimeout(function(){
+     loader.style.top = "-100%"
+     },5800)
+ }
+ loaderAnimation()
+
+
 
 function heroCursor() {
   var hero = document.querySelector(".hero")
