@@ -16,7 +16,7 @@ requestAnimationFrame(raf);
 
 // --------load images-----
 
-var images = document.getElementsByTagName('gif'),
+var images = document.getElementsByTagName('img'),
 totalImages = images.length,
 img;
 
