@@ -401,16 +401,16 @@ tech.forEach((el)=>{
   });
 
 
-  document.body.addEventListener("touchmove", function (dets) {
-    var x = dets.changedTouches[0].pageX;
-    var y = dets.changedTouches[0].pageY;
-    console.log(x, y);
+  // document.body.addEventListener("touchmove", function (dets) {
+  //   var x = dets.changedTouches[0].pageX;
+  //   var y = dets.changedTouches[0].pageY;
+  //   console.log(x, y);
 
-    gsap.to(".cursorHero", {
-      left: x,
-      top: y,
-    });
-  });
+  //   gsap.to(".cursorHero", {
+  //     left: x,
+  //     top: y,
+  //   });
+  // });
 
 
 
