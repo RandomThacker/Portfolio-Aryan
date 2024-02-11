@@ -14,6 +14,23 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
+let count = 0;
+const box = document.getElementById("loaderTimer");
+
+function startLoader() {
+  box.innerHTML = count + "%";
+  nextLoader();
+}
+function nextLoader() {
+  if (count < 100) {
+    count++;
+    setTimeout(startLoader, 50);
+  } 
+}
+startLoader()
+
+
+
 // Preload the images
 const imagesToPreload = [
   './img/linkedin.png',
@@ -54,9 +71,12 @@ function loaderAnimation(){
   var loader = document.querySelector("#loader")
      setTimeout(function(){
      loader.style.top = "-100%"
-     },4000)
+     },6450)
  }
  loaderAnimation()
+
+
+
 
 
 
