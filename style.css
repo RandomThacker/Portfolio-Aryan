@@ -363,6 +363,10 @@ section {
 }
 
 @media only screen and (max-width: 500px) {
+  .heroText h1 {
+    bottom: 0%;
+  }
+
   .about2 {
     height: 120vh;
     flex-direction: column;
