@@ -1,6 +1,6 @@
 //preload images
 // Preload the images
-const imagesToPreload = [
+const imagesToPreloadmatter = [
     './logo/1.svg',
     './logo/2.svg',
     './logo/3.svg',
@@ -23,7 +23,7 @@ const imagesToPreload = [
     './logo/20.svg',
 ];
 
-function preloadImages(images, callback) {
+function preloadImagesmatter(images, callback) {
     let loaded = 0;
     const onLoad = () => {
         loaded++;
@@ -39,7 +39,7 @@ function preloadImages(images, callback) {
 }
 
 // Call the preload function before adding bodies to the world
-preloadImages(imagesToPreload, () => {
+preloadImagesmatter(imagesToPreloadmatter, () => {
     // Once images are preloaded, proceed with adding bodies
     addBodiesWithAnimation();
 });
