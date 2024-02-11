@@ -33,13 +33,19 @@ function drawDot(mouseX, mouseY) {
     bridgeCanvas.fill();
 }
 
+// bridge.addEventListener("mousemove", function (e) {
+//     var brushPos = getBrushPos(e.clientX, e.clientY);
+//     var leftBut = detectLeftButton(e);
+//     if (leftBut == 1) {
+//         drawDot(brushPos.x, brushPos.y);
+//     }
+// }, false);
+
 bridge.addEventListener("mousemove", function (e) {
     var brushPos = getBrushPos(e.clientX, e.clientY);
-    var leftBut = detectLeftButton(e);
-    if (leftBut == 1) {
-        drawDot(brushPos.x, brushPos.y);
-    }
-}, false);
+    drawDot(brushPos.x, brushPos.y);
+}, true);
+
 
 bridge.addEventListener("touchmove", function (e) {
     e.preventDefault();

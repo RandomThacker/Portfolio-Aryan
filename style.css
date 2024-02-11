@@ -1029,10 +1029,11 @@ footer img {
   text-transform: capitalize;
   justify-content: space-around;
   width: 100%;
+  /* background-color: #cda050; */
 }
 
 .socials h2 {
-  padding: 5vw 8%;
+  padding: 8vw 8%;
   z-index: 99;
 
   cursor: pointer;
