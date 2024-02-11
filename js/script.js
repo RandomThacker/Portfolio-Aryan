@@ -91,14 +91,6 @@ function heroCursor() {
      });
    });
  
-   const bridge1 = document.querySelector("#bridge")
-   bridge1.addEventListener("mousedown",()=>{
-     bridge1.style.cursor = "grabbing";
-   })
- 
-   bridge1.addEventListener("mouseup",()=>{
-     bridge.style.cursor = "grab";
-   })
   // ---------------------------Hero------------------------
 
 
