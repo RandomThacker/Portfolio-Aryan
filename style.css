@@ -161,7 +161,7 @@ overflow-x: hidden;
 
 /* ---------Circular-text------- */
 
-#circle { position: relative; width: 100%; padding-bottom: 100%; overflow: hidden; position: absolute; z-index: 99; bottom: -25%; right: -30%; display: none;}
+#circle { position: relative; width: 100%; padding-bottom: 100%; overflow: hidden; position: absolute; z-index: 99; bottom: -25%; right: -35%; display: none;}
 
 #circle text { font-family: 'Helvetica Neue', Arial; font-size: 35px; font-weight: bold; color: white;}
 
@@ -242,6 +242,11 @@ overflow-x: hidden;
   font-size: 1.5vw;
   font-family: migra;
 }
+
+.cursorHero1 {
+  display: none;
+}
+
 
 .cursorCanvas {
   border-radius: 50%;
@@ -324,7 +329,7 @@ section {
 
 .hoverEffect h1 {
   font-size: 1.2vw;
-  font-weight: 600;
+  font-weight: 500;
   transition: all ease-out 0.5s;
   z-index: 99;
   cursor: pointer;
@@ -435,6 +440,44 @@ section {
 }
 
 @media only screen and (max-width: 500px) {
+
+.cursorHero {
+  display: none;
+}
+
+.cursorHero1 {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  z-index: 9;
+  /* margin: 0 -2vw; */
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #dc0000a6;
+  border: 2px solid antiquewhite;
+  height: 8rem;
+  width: 8rem;
+  color: antiquewhite;
+  /* color: rgba(22, 14, 14, 0.468); */
+  object-fit: contain;
+  background-size: contain;
+}
+
+.cursorHero1 h1 {
+  font-size: 1.5rem;
+  font-family: migra;
+}
+
+.cursorCanvas {
+  display: none;
+}
+
+
 #circle{
   display: block;
 }
@@ -1051,7 +1094,7 @@ footer img {
     top: 0;
     z-index: 99;
     font-family: calibreweb;
-    margin: 2vw 5vw;
+    margin:5vw;
     right: 0;
     color: white;
     padding: 1.5vw;

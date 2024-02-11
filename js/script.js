@@ -16,14 +16,14 @@ requestAnimationFrame(raf);
 
 // --------load images-----
 
-var images = document.getElementsByTagName('img'),
-totalImages = images.length,
-img;
+// var images = document.getElementsByTagName('img'),
+// totalImages = images.length,
+// img;
 
-for (var i = 0; i < totalImages; i++) {
-  img = new Image();
-  img.src = images[i].src;
-}
+// for (var i = 0; i < totalImages; i++) {
+//   img = new Image();
+//   img.src = images[i].src;
+// }
 
 // var imgs = [];
 // var imgUrls = ["a.png","b.jpg","c.gif"];
@@ -39,7 +39,7 @@ function loaderAnimation(){
   var loader = document.querySelector("#loader")
      setTimeout(function(){
      loader.style.top = "-100%"
-     },1000)
+     },4000)
  }
  loaderAnimation()
 
@@ -73,6 +73,32 @@ function heroCursor() {
   bridge.addEventListener("mouseup",()=>{
     bridge.style.cursor = "grab";
   })
+
+  // -------phone------
+  hero.addEventListener("mouseenter", function () {
+    gsap.to(".cursorHero1", {
+         transform: "translate(-50%,-50%) scale(1)",
+         backgroundColor: "#dc0000a6",
+         border: "2px solid antiquewhite",
+         innerHTML: `<h1>SCRATCH HERE</h1>`,
+         color: "antiquewhite",
+       })
+   });
+ 
+   hero.addEventListener("mouseleave", function () {
+     gsap.to(".cursorHero1", {
+       transform: "translate(-50%,-50%) scale(0)",
+     });
+   });
+ 
+   const bridge1 = document.querySelector("#bridge")
+   bridge1.addEventListener("mousedown",()=>{
+     bridge1.style.cursor = "grabbing";
+   })
+ 
+   bridge1.addEventListener("mouseup",()=>{
+     bridge.style.cursor = "grab";
+   })
   // ---------------------------Hero------------------------
 
 
@@ -401,16 +427,16 @@ tech.forEach((el)=>{
   });
 
 
-  // document.body.addEventListener("touchmove", function (dets) {
-  //   var x = dets.changedTouches[0].pageX;
-  //   var y = dets.changedTouches[0].pageY;
-  //   console.log(x, y);
+  document.body.addEventListener("touchmove", function (dets) {
+    var x = dets.changedTouches[0].pageX;
+    var y = dets.changedTouches[0].pageY;
+    console.log(x, y);
 
-  //   gsap.to(".cursorHero", {
-  //     left: x,
-  //     top: y,
-  //   });
-  // });
+    gsap.to(".cursorHero1", {
+      left: x,
+      top: y,
+    });
+  });
 
 
 
