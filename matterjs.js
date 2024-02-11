@@ -1,3 +1,53 @@
+//preload images
+// Preload the images
+const imagesToPreload = [
+    './logo/1.svg',
+    './logo/2.svg',
+    './logo/3.svg',
+    './logo/4.svg',
+    './logo/5.svg',
+    './logo/6.svg',
+    './logo/7.svg',
+    './logo/8.svg',
+    './logo/9.svg',
+    './logo/10.svg',
+    './logo/11.svg',
+    './logo/12.svg',
+    './logo/13.svg',
+    './logo/14.svg',
+    './logo/15.svg',
+    './logo/16.svg',
+    './logo/17.svg',
+    './logo/18.svg',
+    './logo/19.svg',
+    './logo/20.svg',
+];
+
+function preloadImages(images, callback) {
+    let loaded = 0;
+    const onLoad = () => {
+        loaded++;
+        if (loaded === images.length) {
+            callback();
+        }
+    };
+    images.forEach(src => {
+        const img = new Image();
+        img.onload = onLoad;
+        img.src = src;
+    });
+}
+
+// Call the preload function before adding bodies to the world
+preloadImages(imagesToPreload, () => {
+    // Once images are preloaded, proceed with adding bodies
+    addBodiesWithAnimation();
+});
+
+//preload images
+
+
+
 const mediaQueryMatter = window.matchMedia('(max-width: 850px)')
 // Check if the media query is true
 
