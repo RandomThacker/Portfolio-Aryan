@@ -129,23 +129,39 @@
 /* ------------Loader-------- */
 html {
   scroll-behavior: initial;
-  overflow: hidden;
 }
 
 html,
 body {
   width: 100vw;
-  overflow-x: hidden;
+  overflow: scroll;
+-webkit-overflow-scrolling: touch;
+overflow-x: hidden;
 }
 
 .main {
   background-color: #000000;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cda050;
+  border-radius: 10px;
+}
+
 
 /* ---------Circular-text------- */
 
-#circle { position: relative; width: 100%; padding-bottom: 100%; overflow: hidden; position: absolute; z-index: 99; bottom: -25%; right: -30%;}
+#circle { position: relative; width: 100%; padding-bottom: 100%; overflow: hidden; position: absolute; z-index: 99; bottom: -25%; right: -30%; display: none;}
 
 #circle text { font-family: 'Helvetica Neue', Arial; font-size: 35px; font-weight: bold; color: white;}
 
@@ -292,11 +308,12 @@ section {
   top: 0;
   z-index: 99;
   font-family: calibreweb;
-  margin: 2vw 5vw;
+  margin: 1vw 2vw;
   right: 0;
   color: white;
   padding: 1.5vw;
-  padding-top: 0;
+  padding-top: 1vw;
+  /* background-color: #cda050; */
 }
 
 .text-div {
@@ -306,7 +323,7 @@ section {
 }
 
 .hoverEffect h1 {
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-weight: 600;
   transition: all ease-out 0.5s;
   z-index: 99;
@@ -418,6 +435,10 @@ section {
 }
 
 @media only screen and (max-width: 500px) {
+#circle{
+  display: block;
+}
+
   .heroText h1 {
     bottom: 0%;
   }
