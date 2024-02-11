@@ -14,25 +14,40 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
-// --------load images-----
+// Preload the images
+const imagesToPreload = [
+  './img/linkedin.png',
+  './img/insta.png',
+  './img/github.png',
+  './img/gmail.png',
+  './img/tech.gif',
+  './img/work.webp',
+  './img/batman.gif',
 
-// var images = document.getElementsByTagName('img'),
-// totalImages = images.length,
-// img;
+  
+];
 
-// for (var i = 0; i < totalImages; i++) {
-//   img = new Image();
-//   img.src = images[i].src;
-// }
+function preloadImages(images, callback) {
+  let loaded = 0;
+  const onLoad = () => {
+      loaded++;
+      if (loaded === images.length) {
+          callback();
+      }
+  };
+  images.forEach(src => {
+      const img = new Image();
+      img.onload = onLoad;
+      img.src = src;
+  });
+}
 
-// var imgs = [];
-// var imgUrls = ["a.png","b.jpg","c.gif"];
-// for (i=0;i<imgUrls.length;i++) {
-//     imgs.push(new Image());
-//     imgs[i].src = imgUrls[i]
-// }
+// Call the preload function before adding bodies to the world
+preloadImages(imagesToPreload, () => {
+  // Once images are preloaded, proceed with adding bodies
+  addBodiesWithAnimation();
+});
 
-// --------load images-----
 
 
 function loaderAnimation(){
@@ -342,7 +357,7 @@ let link = document.querySelector('.linkedin')
   el.addEventListener("mouseover", function () {
     gsap.to(".cursorHero", {
       transform: "translate(-30%,-30%) scale(0.8)",
-      backgroundImage:"url(https://i.ibb.co/dmfWX9v/batman.gif)",
+      backgroundImage:"url(./img/batman.gif)",
       borderRadius:"10px",
       width:"170px",
       height:"170px",
