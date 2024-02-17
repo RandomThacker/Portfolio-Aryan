@@ -560,7 +560,7 @@ function page5ColorChange() {
       trigger: ".page5",
       start: "top 70%",
       end: "center 70%",
-      markers: true,
+      // markers: true,
       scrub: 3,
     },
     backgroundColor: "white"
