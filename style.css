@@ -161,10 +161,6 @@ body {
 overflow-x: hidden;
 }
 
-.main {
-  /* background-color: #000000; */
-}
-
 ::-webkit-scrollbar {
   width: 0px;
 }
