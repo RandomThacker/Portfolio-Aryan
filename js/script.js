@@ -71,7 +71,9 @@ function loaderAnimation(){
   var loader = document.querySelector("#loader")
      setTimeout(function(){
      loader.style.top = "-100%"
-     },6450)
+    //  },6450)
+    },450)
+
  }
  loaderAnimation()
 
@@ -457,7 +459,7 @@ tech.forEach((el)=>{
   document.body.addEventListener("touchmove", function (dets) {
     var x = dets.changedTouches[0].pageX;
     var y = dets.changedTouches[0].pageY;
-    console.log(x, y);
+    // console.log(x, y);
 
     gsap.to(".cursorHero1", {
       left: x,
@@ -583,19 +585,20 @@ function dom() {
 
   window.addEventListener("resize", setCanvasSize);
 
+
   function files(index) {
+    let frameNumber = String(index).padStart(3, '0');
     const data = `
-      ./img/SequenceImages/jlsousa tires project 4  Urcola+.72.${
-        11 + index
-      }-min.png
-      `;
+      ./img/SequenceImages/ezgif-frame-${frameNumber}.jpg`;
+      console.log(data);
+
     return data.trim();
   }
 
-  const frameCount = 141;
+  const frameCount = 71 ;
   const images = [];
 
-  for (let i = 0; i < frameCount; i++) {
+  for (let i = 1; i <= frameCount; i++) {
     const img = new Image();
     img.src = files(i);
     images.push(img);
@@ -633,26 +636,27 @@ function dom() {
     scaleImage(images[imageSeq.frame], context);
   }
 
-  function scaleImage(img, ctx) {
-    const canvas = ctx.canvas;
-    const hRatio = canvas.width / img.width;
-    const vRatio = canvas.height / img.height;
-    const ratio = Math.max(hRatio, vRatio);
-    const centerShift_x = (canvas.width - img.width * ratio) / 2;
-    const centerShift_y = (canvas.height - img.height * ratio) / 2;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(
-      img,
-      0,
-      0,
-      img.width,
-      img.height,
-      centerShift_x,
-      centerShift_y,
-      img.width * ratio,
-      img.height * ratio
-    );
-  }
+  
+function scaleImage(img, ctx) {
+  var canvas = ctx.canvas;
+  var hRatio = canvas.width / img.width;
+  var vRatio = canvas.height / img.height;
+  var ratio = Math.min(hRatio, vRatio);
+  var centerShift_x = (canvas.width - img.width * ratio) / 2;
+  var centerShift_y = (canvas.height - img.height * ratio) / 2;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(
+    img,
+    0,
+    0,
+    img.width,
+    img.height,
+    centerShift_x,
+    centerShift_y,
+    img.width * ratio,
+    img.height * ratio
+  );
+}
 }
 
 dom();

@@ -971,15 +971,16 @@ section {
 }
 
 .heroCanvas {
-  width: 80%;
-  height: 90%;
-  display: block;
-  margin: auto;
+  width: auto;
+  height: 150%;
+  /* border-radius: 10px; */
+  /* display: block;
+  margin: auto; */
   object-fit: contain;
-  background-color: #e7e7e7;
+  /* background-color: #e7e7e7; */
   z-index: 2;
 
-  display: none;
+  /* display: none; */
 }
 
 .scrollFooter {
