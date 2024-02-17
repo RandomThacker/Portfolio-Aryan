@@ -162,7 +162,7 @@ overflow-x: hidden;
 }
 
 .main {
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 
 ::-webkit-scrollbar {
@@ -414,7 +414,7 @@ section {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  /* background: #3d16ff; */
+  background: black;
   padding: 18vw 4vw 6vw 4vw;
   color: #ffffff;
 }
@@ -467,13 +467,17 @@ section {
   display: none;
 }
 
+.hero {
+  position: relative;
+}
+
 .cursorHero1 {
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: absolute;
+  position: fixed;
   z-index: 9;
   /* margin: 0 -2vw; */
   pointer-events: none;
@@ -499,9 +503,7 @@ section {
   display: none;
 }
 
-.hero {
-  position: relative;
-}
+
 
 
 #circle{
@@ -972,7 +974,7 @@ section {
 }
 
 .heroCanvas {
-  width: auto;
+  width: 90%;
   height: 150%;
   /* border-radius: 10px; */
   /* display: block;

@@ -484,6 +484,17 @@ function colorChanger() {
     backgroundColor: "#fff"
   })
 
+  gsap.to(".about2", {
+    scrollTrigger: {
+      trigger: ".page3",
+      // markers: false,
+      start: "-30% 60%",
+      end: "top 40%",
+      scrub: true,
+    },
+    backgroundColor: "#fff"
+  })
+
   gsap.to(".main", {
     scrollTrigger: {
       trigger: ".page3",
