@@ -555,6 +555,17 @@ function page5ColorChange() {
     backgroundColor: "white"
   }, "same")
 
+  gsap.to(".blankpg5", {
+    scrollTrigger: {
+      trigger: ".page5",
+      start: "top 70%",
+      end: "center 70%",
+      markers: true,
+      scrub: 3,
+    },
+    backgroundColor: "white"
+  }, "same")
+
   gsap.to("#horizontal", {
     scrollTrigger: {
       trigger: ".page5",

@@ -963,7 +963,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #000000; */
+  /* background-color: #c65d5d; */
+  /* margin: 20vh 0; */
 }
 
 .colChange {
