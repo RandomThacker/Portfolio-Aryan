@@ -406,12 +406,12 @@ section {
 /* ---------------------page 2 - about----------------- */
 
 .about2 {
-  height: 64rem;
+  height: 60rem;
   width: 100%;
   display: flex;
   justify-content: space-around;
   background: black;
-  padding: 18vw 4vw 6vw 4vw;
+  padding: 16vw 4vw 6vw 4vw;
   color: #ffffff;
 }
 
