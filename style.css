@@ -167,12 +167,12 @@ overflow-x: hidden;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #212121;
+  background: black;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #cda050;
+  background: #5c0101;
   border-radius: 10px;
 }
 
@@ -754,7 +754,7 @@ section {
 /* -------------------------Horizontal scroll----------- */
 #horizontal {
   padding: 100px 0;
-  width: 400%;
+  width: 250%;
   overflow-x: hidden;
 }
 
@@ -771,8 +771,8 @@ section {
 
 .horizontal__item {
   /* border: 1px solid #efefef; */
-  height: 75vh;
-  width: 55vw;
+  height: 550px;
+  width: 950px;
   border-radius: 10px;
   /* background-color:pink; */
   display: flex;
@@ -859,8 +859,8 @@ section {
   font-size: 1vw;
   font-weight: 200;
   font-family: benzin;
-  width: 90%;
-  padding-left: 18%;
+  width: 85%;
+  padding-left: 8%;
 }
 
 .horizontal__num {

@@ -71,8 +71,8 @@ function loaderAnimation(){
   var loader = document.querySelector("#loader")
      setTimeout(function(){
      loader.style.top = "-100%"
-     },6450)
-    // },450)
+    //  },6450)
+    },450)
 
  }
  loaderAnimation()
@@ -541,14 +541,14 @@ function horizintalScroll() {
 
   gsap.to(box_items, {
     xPercent: -85 * (box_items.length - 1),
-    ease: "sine.out",
+    // ease: "sine.out",
     scrollTrigger: {
       trigger: section_2,
       pin: true,
-      // markers: true,
+      markers: true,
       scrub: 1,
-      snap: 1 / (box_items.length - 1),
-      end: "+=" + section_2.offsetWidth
+      snap: 100 / (box_items.length - 1),
+      // end: "+=" + section_2.offsetWidth
     }
   });
 }
@@ -557,7 +557,7 @@ horizintalScroll()
 function page5ColorChange() {
   gsap.to(".page5", {
     scrollTrigger: {
-      trigger: ".page5",
+      trigger: ".blankpg5",
       start: "top 70%",
       end: "center 70%",
       // markers: true,
@@ -568,7 +568,7 @@ function page5ColorChange() {
 
   gsap.to(".blankpg5", {
     scrollTrigger: {
-      trigger: ".page5",
+      trigger: ".blankpg5",
       start: "top 70%",
       end: "center 70%",
       // markers: true,
@@ -579,7 +579,7 @@ function page5ColorChange() {
 
   gsap.to("#horizontal", {
     scrollTrigger: {
-      trigger: ".page5",
+      trigger: ".blankpg5",
       start: "top 70%",
       end: "center 70%",
       // markers: true,
