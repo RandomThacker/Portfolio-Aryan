@@ -71,8 +71,8 @@ function loaderAnimation(){
   var loader = document.querySelector("#loader")
      setTimeout(function(){
      loader.style.top = "-100%"
-    //  },6450)
-    },450)
+     },6450)
+    // },450)
 
  }
  loaderAnimation()
