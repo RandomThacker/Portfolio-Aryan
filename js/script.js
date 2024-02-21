@@ -545,7 +545,7 @@ function horizintalScroll() {
     scrollTrigger: {
       trigger: section_2,
       pin: true,
-      markers: true,
+      // markers: true,
       scrub: 1,
       snap: 100 / (box_items.length - 1),
       // end: "+=" + section_2.offsetWidth
@@ -555,38 +555,38 @@ function horizintalScroll() {
 horizintalScroll()
 
 function page5ColorChange() {
-  gsap.to(".page5", {
+  gsap.to(".colChange", {
     scrollTrigger: {
       trigger: ".blankpg5",
       start: "top 70%",
-      end: "center 70%",
-      // markers: true,
+      end: "150% 70%",
+      markers: true,
       scrub: 3,
     },
     backgroundColor: "white"
   }, "same")
 
-  gsap.to(".blankpg5", {
-    scrollTrigger: {
-      trigger: ".blankpg5",
-      start: "top 70%",
-      end: "center 70%",
-      // markers: true,
-      scrub: 3,
-    },
-    backgroundColor: "white"
-  }, "same")
+//   gsap.to(".blankpg5", {
+//     scrollTrigger: {
+//       trigger: ".blankpg5",
+//       start: "top 70%",
+//       end: "center 70%",
+//       // markers: true,
+//       scrub: 3,
+//     },
+//     backgroundColor: "white"
+//   }, "same")
 
-  gsap.to("#horizontal", {
-    scrollTrigger: {
-      trigger: ".blankpg5",
-      start: "top 70%",
-      end: "center 70%",
-      // markers: true,
-      scrub: 3,
-    },
-    backgroundColor: "white"
-  }, "same")
+//   gsap.to("#horizontal", {
+//     scrollTrigger: {
+//       trigger: ".blankpg5",
+//       start: "top 70%",
+//       end: "center 70%",
+//       // markers: true,
+//       scrub: 3,
+//     },
+//     backgroundColor: "white"
+//   }, "same")
 }
 page5ColorChange();
 
