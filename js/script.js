@@ -40,8 +40,7 @@ const imagesToPreload = [
   './img/tech.gif',
   './img/work.webp',
   './img/batman.gif',
-
-  
+  "./img/bgVideo.mp4"
 ];
 
 function preloadImages(images, callback) {
